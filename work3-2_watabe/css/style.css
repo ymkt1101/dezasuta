@@ -1,0 +1,96 @@
+@charset "utf-8";
+
+/* cssリセット */
+
+html,
+body,
+h1,
+h2,
+h3,
+p,
+dl,
+dt,
+dd,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    color: #333;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
+        "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+    border: none;
+}
+/* ここまでリセットcss */
+
+.wrap {
+    max-width: 960px;
+    margin: 0 auto;
+    background-color: #eeeeee;
+}
+
+.wrap ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.wrap img {
+    max-width: 100%;
+}
+
+.title {
+    color: #398072;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.sub-title {
+    color: #398072;
+    border-left: 10px solid #398072;
+    margin: 10px;
+}
+
+.content {
+    background-color: #fff;
+    max-width: 300px;
+}
+
+.txt {
+    padding: 0;
+}
+
+.footer {
+    background-color: #eeeeee;
+    max-width: 960px;
+    height: 50px;
+}
+
+@media screen and (max-width: 400px) {
+    .wrap ul {
+        display: block;
+    }
+
+    .wrap img {
+        width: 100%;
+    }
+
+    .content {
+        max-width: 100%;
+        margin: 20px 10px;
+    }
+}
