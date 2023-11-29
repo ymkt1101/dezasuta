@@ -56,7 +56,7 @@ img {
 }
 
 .title {
-    margin: 50px;
+    margin: 30px;
     text-align: center;
 }
 
@@ -65,17 +65,19 @@ img {
 }
 
 .sv li {
-    width: 33.33333%;
+    width: calc(100% / 3);
     height: 500px;
 }
 
 .txt {
     text-align: center;
-    margin: 50px;
+    margin: 30px;
+    line-height: 1.6;
 }
 
 .btn {
-    padding: 20px;
+    display: inline-block;
+    padding: 15px;
     border: 1px solid #333;
 }
 
@@ -89,7 +91,7 @@ img {
 }
 
 .footer li a {
-    padding: 0 30px;
+    padding: 0 20px;
     text-decoration: underline;
 }
 
