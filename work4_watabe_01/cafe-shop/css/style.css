@@ -22,6 +22,7 @@ li {
     font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3",
         "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝",
         "ＭＳ 明朝", serif;
+    font-feature-settings: "palt";
 }
 
 a {
@@ -45,17 +46,6 @@ img {
     max-width: 100%;
     vertical-align: bottom;
     border: none;
-}
-
-p,
-h1,
-h2 {
-    font-feature-settings: "palt";
-}
-
-body {
-    max-width: 1920px;
-    padding: 0 10px;
 }
 
 .header_wrap {
@@ -96,8 +86,8 @@ main {
     width: 125px;
     position: fixed;
     z-index: 999;
-    right: 16%;
-    bottom: 16%;
+    right: 3%;
+    bottom: 3%;
 }
 
 /* 各コンテンツタイトル　基本形 */
@@ -146,7 +136,7 @@ main {
 }
 
 .container-about_left img {
-    max-width: 500px;
+    width: 100%;
     height: 560px;
     object-fit: cover;
     border-radius: 0 0 82px;
@@ -160,15 +150,14 @@ main {
 p.container-about_right_txt1 {
     font-size: 44px;
     line-height: 1.38;
-    letter-spacing: 0.1em;
     margin-bottom: 19px;
-    padding-left: 79px;
+    padding-left: 16%;
 }
 
 p.container-about_right_txt2 {
     font-size: 16px;
     line-height: 1.625;
-    padding-left: 86px;
+    padding-left: 18%;
 }
 
 .container-about_right img {
@@ -187,14 +176,14 @@ p.container-about_right_txt2 {
 }
 
 .menu-item {
-    width: 1000px;
+    max-width: 1000px;
+    padding: 0 10px;
     display: flex;
+    justify-content: space-between;
     margin: 35px auto;
 }
 
 .menu-item img {
-    width: 300px;
-    height: 200px;
     border-radius: 0 41px 0 0;
 }
 
@@ -203,18 +192,16 @@ p.container-about_right_txt2 {
 }
 
 .menu-item li {
-    width: calc(100% / 3);
+    width: calc((100% - 100px) / 3);
 }
 
 p.menu-item_ttl {
-    width: 300px;
     font-size: 38px;
     margin: -8px 0 0 12px;
     color: #d30202;
 }
 
 p.menu-item_txt {
-    width: 300px;
     margin-top: 14px;
     font-size: 17px;
     line-height: 1.47;
@@ -230,23 +217,18 @@ p.menu-item_txt {
     justify-content: center;
 }
 
-.gallery li {
-    width: calc(100% / 5);
-}
-
 .gallery_pic {
     margin-top: 16px;
-    object-fit: cover;
-    height: 300px;
 }
 
 /* イベント */
 .event {
+    padding: 0 10px;
     margin-top: 62px;
 }
 
 .event-box {
-    width: 1000px;
+    max-width: 1000px;
     background-color: #fff;
     border: 3.68px solid #4f260b;
     margin: 30px auto;
@@ -260,17 +242,16 @@ p.menu-item_txt {
     width: 680px;
     margin: 0 auto;
     line-height: 1.95;
-    text-align: left;
+    font-size: 23px;
 }
 
-.event p {
-    font-size: 23px;
-    line-height: 1.95;
+.event li a {
+    text-decoration: underline;
 }
 
 .event-tab {
     display: inline-block;
-    width: 2em;
+    width: 2.5em;
 }
 
 /* アクセス */
@@ -279,6 +260,7 @@ p.menu-item_txt {
 }
 
 .access-map {
+    display: block;
     width: 100%;
     height: 470px;
     padding-top: 38px;
@@ -291,18 +273,15 @@ iframe {
 /* フッター */
 .footer {
     background-color: #fff;
+    padding-bottom: 30px;
 }
 
-.footer ul {
-    text-align: left;
-}
-
-.footer li {
+.footer img {
     padding-right: 65px;
 }
 
 .footer-item {
-    width: 1000px;
+    max-width: 1000px;
     display: flex;
     margin: 0 auto;
     padding-top: 67px;
@@ -311,6 +290,7 @@ iframe {
 .footer-item p {
     font-size: 20px;
     line-height: 1.95;
+    color: #000;
 }
 
 img.footer-logo {
@@ -321,4 +301,5 @@ img.footer-logo {
     font-size: 16px;
     text-align: center;
     margin-top: 70px;
+    color: #000;
 }

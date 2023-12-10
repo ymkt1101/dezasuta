@@ -15,12 +15,6 @@
         <div id="#" class="header_slider">
             <div><img src="images/pc_first-100.jpg" alt="店内の様子"></div>
         </div>
-
-        <!-- リンクボタン -->
-        <nav class="fix-btn">
-            <a href="#"><img src="images/to_top@2x.png" alt="TOPへ"></a>
-            <a href="index.html#top"></a>
-        </nav>
     </header>
 
     <main>
@@ -28,11 +22,11 @@
             <h1 class="header_logo"><img src="images/design_cafe_logo_header@2x.png" alt="DESIGN CAFE"></h1>
             <nav class="pc_nav">
                 <ul>
-                    <li><a href="index.html#id_about_us">ABOUT US</a></li>
-                    <li><a href="index.html#id_menu">MENU</a></li>
-                    <li><a href="index.html#id_gallery">GALLERY</a></li>
-                    <li><a href="index.html#id_event">EVENT</a></li>
-                    <li><a href="index.html#id_access">ACCESS</a></li>
+                    <li><a href="#about_us">ABOUT US</a></li>
+                    <li><a href="#menu">MENU</a></li>
+                    <li><a href="#gallery">GALLERY</a></li>
+                    <li><a href="#event">EVENT</a></li>
+                    <li><a href="#access">ACCESS</a></li>
                 </ul>
             </nav>
         </div>
@@ -44,12 +38,12 @@
             足を運んでくれるお客さんには落ち着く空間とこだわりのコーヒーを提供したい。</p>
 
         <!-- アバウト -->
-        <div id="id_about_us" class="container-about">
+        <section id="about_us" class="container-about">
             <div class="container-about_left">
-                <img src="images/about_us@2x-100.jpg" alt="イメージ画像">
+                <img src="images/about_us@2x-100.jpg" alt="cheers">
             </div>
             <div class="container-about_right">
-                <img src="images/about_us@2x.png" alt="about" class="container-about_ttl">
+                <h2><img src="images/about_us@2x.png" alt="ABOUT US" class="container-about_ttl"></h2>
                 <p class="container-about_right_txt1">私たちが提供する<br>こだわりのコーヒー</p>
                 <p class="container-about_right_txt2">サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。
                     サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。
@@ -58,13 +52,13 @@
                     サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。
                 </p>
             </div>
-        </div>
+        </section>
 
         <!-- メニュー -->
-        <div id="id_menu" class="menu">
-            <div class="content-ttl">
+        <section id="menu" class="menu">
+            <h2 class="content-ttl">
                 <img src="images/menu@2x.png" alt="MENU">
-            </div>
+            </h2>
             <ul class="menu-item">
                 <li>
                     <img src="images/pc_menu_drink-100.jpg" alt="drink">
@@ -82,13 +76,13 @@
                     <p class="menu-item_txt">スイーツメニューの概要を100文字程度で紹介します。素材やこだわりなどをアピールしていきます。</p>
                 </li>
             </ul>
-        </div>
+        </section>
 
         <!-- ギャラリー -->
-        <div id="id_gallery" class="gallery">
-            <div class="content-ttl">
+        <section id="gallery" class="gallery">
+            <h2 class="content-ttl">
                 <img src="images/gallery@2x.png" alt="GALLERY">
-            </div>
+            </h2>
             <ul class="gallery_pic">
                 <li><img src="images/pc_gallary_05-100.jpg" alt="店内1"></li>
                 <li><img src="images/pc_gallary_04-100.jpg" alt="コーヒー豆"></li>
@@ -96,51 +90,64 @@
                 <li><img src="images/pc_gallary_02-100.jpg" alt="店内3"></li>
                 <li><img src="images/pc_gallary_01-100.jpg" alt="コーヒー"></li>
             </ul>
-        </div>
+        </section>
 
         <!-- イベント -->
-        <div id="id_event" class="event">
-            <div class="content-ttl">
+        <secion id="event" class="event">
+            <h2 class="content-ttl">
                 <img src="images/event@2x.png" alt="EVENT">
-            </div>
+            </h2>
             <div class="event-box">
                 <ul>
                     <li>
-                        <p>2020.06.23<span class="event-tab"></span> 7月はイベント出店のため0/0お休みします </p>
+                        <time datetime="2020-06-23">2023.06.23</time>
+                        <span class="event-tab"></span>
+                        <a href="">7月はイベント出店のため0/0お休みします</a>
                     </li>
                     <li>
-                        <p>2020.03.15<span class="event-tab"></span>春の新商品新発売。話題のあのブランドとコラボ</p>
+                        <time datetime="2020-03-15">2020.03.15</time>
+                        <span class="event-tab"></span>
+                        <a href="">春の新商品新発売。話題のあのブランドとコラボ</a>
                     </li>
                     <li>
-                        <p>2020.02.06<span class="event-tab"></span>コーヒーの日で30％OFFイベントを開催［3日間限定］</p>
+                        <time datetime="2020-02-06">2020.02.06</time>
+                        <span class="event-tab"></span>
+                        <a href="">コーヒーの日で30％OFFイベントを開催［3日間限定］</a>
                     </li>
                 </ul>
             </div>
-        </div>
+        </secion>
 
         <!-- アクセス -->
-        <div id="id_access" class="access">
-            <div class="content-ttl">
+        <section id="access" class="access">
+            <h2 class="content-ttl">
                 <img src="images/access@2x.png" alt="access">
-            </div>
+            </h2>
             <iframe class="access-map"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3292.374175155078!2d132.4815569751921!3d34.39183419972377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x355aa20b7be26a43%3A0x64003524f209fc8c!2zTUFaREEgWm9vbS1ab29t44K544K_44K444Ki44Og5bqD5bO277yI5bqD5bO25biC5rCR55CD5aC077yJ!5e0!3m2!1sja!2sjp!4v1701950523993!5m2!1sja!2sjp"
                 allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
+        </section>
     </main>
     <!-- フッター -->
     <footer class="footer">
-        <ul class="footer-item">
-            <li><img src="images/design_cafe_logo_footer@2x.png" alt="logo" class="footer-logo"></li>
-            <li>
-                <p>OPEN 18:00 / CLOSE 24:00</p>
-                <p>〒150-0022</p>
-                <p>東京都渋谷区東京南123デザインビルB1</p>
-                <p>MAIL：info@designcafe.tokyo</p>
-            </li>
-        </ul>
+        <div class="footer-item">
+            <div class="footer-img"><img src="images/design_cafe_logo_footer@2x.png" alt="logo" class="footer-logo">
+            </div>
+            <div>
+                <p>OPEN 18:00 / CLOSE 24:00<br>
+                    〒150-0022<br>
+                    東京都渋谷区東京南123デザインビルB1<br>
+                    MAIL：info@designcafe.tokyo</p>
+            </div>
+        </div>
         <p class="cp-wrt">&copy; 2021 DESIGN CAFE</p>
     </footer>
+
+    <!-- リンクボタン -->
+    <div class="fix-btn">
+        <a href="#"><img src="images/to_top@2x.png" alt="TOPへ"></a>
+        <a href="index.html#top"></a>
+    </div>
 </body>
 
 </html>
