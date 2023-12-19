@@ -57,8 +57,8 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* padding: 10px 7% 0 3%; */
-    padding: 10px 30px 0;
+    padding: 10px 7% 0 3%;
+    /* padding: 10px 30px 0; */
 }
 
 .header_logo {
@@ -132,10 +132,10 @@ main {
 
 /* アバウト */
 .container-about {
+    max-width: 1000px;
     display: flex;
     margin: 79px auto;
     box-sizing: border-box;
-    max-width: 1000px;
 }
 
 .container-about_left {
@@ -191,6 +191,7 @@ p.container-about_right_txt2 {
 }
 
 .menu-item img {
+    width: 100%;
     border-radius: 0 41px 0 0;
 }
 
@@ -204,12 +205,11 @@ p.container-about_right_txt2 {
 
 p.menu-item_ttl {
     font-size: 38px;
-    margin: -8px 0 0 12px;
+    margin: -8px 0 14px 12px;
     color: #d30202;
 }
 
 p.menu-item_txt {
-    margin-top: 14px;
     font-size: 17px;
     line-height: 1.47;
 }
@@ -290,9 +290,9 @@ iframe {
 }
 
 .footer-item {
-    max-width: 100%;
+    max-width: 1000px;
     display: flex;
-    padding-left: 8%;
+    margin: 0 auto;
 }
 
 .footer-item p {
@@ -342,7 +342,7 @@ img.footer-logo {
     .sp_btn {
         position: absolute;
         top: 20px;
-        right: 25px;
+        right: 5%;
         display: block;
         height: 23px;
         cursor: pointer;
@@ -427,9 +427,12 @@ img.footer-logo {
     .event-tab {
         display: none;
     }
+
     .sp_mv {
         display: block;
-        max-width: 100%;
+    }
+    .sp_mv img {
+        width: 100%;
     }
 
     .header_logo {
@@ -466,10 +469,8 @@ img.footer-logo {
 
     /* アバウト */
     .container-about {
-        width: 375px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
         margin: 0 auto;
         padding-top: 41px;
         box-sizing: inherit;
@@ -494,14 +495,14 @@ img.footer-logo {
     p.container-about_right_txt1 {
         font-size: 36px;
         line-height: 1.25;
-        padding-left: 20px;
+        padding-left: 5%;
         order: 3;
     }
 
     p.container-about_right_txt2 {
         font-size: 16px;
         line-height: 1.75;
-        padding-left: 20px;
+        padding: 0 5%;
         order: 4;
     }
 
@@ -511,34 +512,38 @@ img.footer-logo {
 
     .container-about_right h2 {
         margin: 0 auto;
+        order: 1;
     }
 
     .container-about_ttl {
         height: 45px;
         padding-bottom: 13px;
         margin: 10px 0;
-        order: 1;
     }
 
     /* メニュ */
     .menu {
-        padding-top: 57px;
+        padding-top: 49px;
     }
 
     .menu-item {
-        width: 300px;
         display: block;
         margin: 18px auto;
-        padding: initial;
+        padding: 0 10%;
     }
 
     .menu-item li {
-        width: 300px;
-        padding-bottom: 55px;
+        width: 100%;
+        padding-bottom: 33px;
+    }
+
+    p.menu-item_ttl {
+        font-size: 40px;
+        margin: -12px 0 24px 3%;
     }
 
     p.menu-item_txt {
-        margin-top: 21px;
+        margin-bottom: 20px;
         line-height: 1.58;
     }
 
@@ -553,12 +558,17 @@ img.footer-logo {
     .gallery {
         padding-top: 15px;
     }
+    .gallery li {
+        width: 100%;
+    }
+
     .gallery-pic {
         margin: 0 auto;
         display: block;
     }
+
     .gallery_pic img {
-        width: 375px;
+        width: 100%;
         object-fit: cover;
         margin: 0;
         padding: 0;
@@ -566,20 +576,18 @@ img.footer-logo {
 
     /* イベント */
     .event {
-        padding: 31px 10px 0;
+        padding: 36px 6% 0;
     }
     .event-box {
-        max-width: 335px;
         margin: 17px auto;
         display: block;
     }
     .event ul {
-        width: 90%;
         margin: 20px 0;
     }
 
     .event li {
-        margin: 16px 0 20px;
+        margin: 16px 0;
         line-height: 1.3125;
         font-size: 16px;
         text-overflow: ellipsis;
@@ -589,10 +597,7 @@ img.footer-logo {
 
     /* アクセス */
     .access {
-        padding-top: 0;
-        padding-bottom: 10px;
-        width: 375px;
-        margin: 0 auto;
+        padding-top: 10px;
     }
     .access-map {
         height: 190px;
@@ -600,26 +605,20 @@ img.footer-logo {
     }
     /* フッター */
     .footer {
-        width: 375px;
-        margin: 10px auto;
-        padding-top: 25px;
+        padding-top: 41px;
     }
 
     .footer-item {
-        width: 100%;
         display: block;
-        padding-left: 5%;
-    }
-    .footer-item img {
-        margin-right: 10px;
+        padding: 0 2%;
     }
 
     .footer-item p {
-        font-size: 20px;
+        font-size: 18px;
         line-height: 1.72;
-        padding-top: 20px;
+        padding-top: 28px;
     }
     .cp-wrt {
-        margin-top: 30px;
+        margin-top: 38px;
     }
 }
