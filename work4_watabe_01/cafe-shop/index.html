@@ -6,19 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>デザインカフェ</title>
     <meta name="description" content="デザインカフェのサイトです">
+    <!-- スタイルcssより前に記述 後から上書きするかもしれないから-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <!-- lightbox css -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- jQueryより後に記述 jqueryの拡張機能だから-->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- lightbox js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
+
+
 </head>
 
 <body>
     <header>
-        <!-- スライダーの設定　消しちゃだめ -->
+        <!-- スライダーの設定 -->
         <div id="#" class="header_slider">
-            <div class="pc_mv">
-                <img src="images/pc_first-100.jpg" alt="店内の様子">
+            <div>
+                <picture>
+                    <source media="(max-width:767px)" srcset="images/sp_main_vs@2x-100.jpg">
+                    <img src="images/pc_first-100.jpg" alt="店内の様子">
+                </picture>
             </div>
-            <div class="sp_mv">
-                <img src="images/sp_main_vs@2x-100.jpg" alt="店内の様子">
+            <div>
+                <picture>
+                    <source media="(max-width:767px)" srcset="images/sp_main_vs_2@2x-100.jpg">
+                    <img src="images/slider_2.jpg" alt=" 店内の様子">
+                </picture>
             </div>
         </div>
     </header>
@@ -105,13 +125,37 @@
             </h2>
             <ul class="gallery_pic">
                 <li>
-                    <img src="images/pc_gallary_05-100.jpg" alt="店内1" class="pc_pic">
-                    <img src="images/mobile_gallery-100.jpg" alt="店内1" class="sp_brk">
+                    <a href="images/pc_gallary_05-100.jpg" data-lightbox="gallery_mdl" class="mdl_box">
+                        <picture><img src="images/pc_gallary_05-100.jpg" alt="店内1"></picture>
+                    </a>
+
                 </li>
-                <li><img src="images/pc_gallary_04-100.jpg" alt="コーヒー豆" class="pc_pic"></li>
-                <li><img src="images/pc_gallary_03-100.jpg" alt="店内2" class="pc_pic"></li>
-                <li><img src="images/pc_gallary_02-100.jpg" alt="店内3" class="pc_pic"></li>
-                <li><img src="images/pc_gallary_01-100.jpg" alt="コーヒー" class="pc_pic"></li>
+                <li>
+                    <a href="images/pc_gallary_04-100.jpg" data-lightbox="gallery_mdl" class="mdl_box">
+                        <picture><img src="images/pc_gallary_04-100.jpg" alt="コーヒー豆"></picture>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="images/pc_gallary_03-100.jpg" data-lightbox="gallery_mdl" class="mdl_box">
+                        <picture><img src="images/pc_gallary_03-100.jpg" alt="店内2"></picture>
+                    </a>
+                </li>
+                <li>
+                    <a href="images/pc_gallary_02-100.jpg" data-lightbox="gallery_mdl" class="mdl_box">
+                        <picture><img src="images/pc_gallary_02-100.jpg" alt="店内3"></picture>
+                    </a>
+                </li>
+                <li>
+                    <a href="images/pc_gallary_01-100.jpg" data-lightbox="gallery_mdl" class="mdl_box">
+                        <picture><img src="images/pc_gallary_01-100.jpg" alt="コーヒー"></picture>
+                    </a>
+                </li>
+                <li>
+                    <a href="images/pc_gallary_01-100.jpg" data-lightbox="gallery_mdl" class="mdl_box">
+                        <picture><img src="images/pc_gallary_01-100.jpg" alt="コーヒー"></picture>
+                    </a>
+                </li>
             </ul>
         </section>
 
@@ -181,7 +225,40 @@
                 $('.sp_nav').fadeToggle();
                 $('.sp_btn').toggleClass('open')
             });
+
+            $('.header_slider').slick({
+                autoplay: true,
+                autoplaySpeed: 3000,
+                dots: true,
+                arrows: true,
+            });
+
+            $('.gallery_pic').slick({
+                autoplay: true,
+                autoplaySpeed: 3000,
+                slidesToShow: 5,
+                slidesToScroll: 1,
+                pauseOnFocus: true,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                        }
+                    }
+                ]
+            });
+
+            lightbox.option({
+                'alwaysShowNavOnTouchDevices': true,
+                'fadeDuration': 200,
+                'resizeDuration': 1000,
+                'wrapAround': true,
+            })
+
         });
+
     </script>
 </body>
 

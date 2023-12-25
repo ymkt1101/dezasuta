@@ -414,6 +414,51 @@ img.footer-logo {
             "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
     }
 }
+/* スライダー */
+.slick-dots {
+    bottom: 20px;
+}
+.slick-dots li button:before,
+.slick-dots li.slick-active button:before {
+    color: #fff;
+    font-size: 14px;
+}
+.slick-dotted.slick-slider {
+    margin-bottom: 0;
+}
+
+.slick-next {
+    right: 25px;
+    z-index: 1;
+}
+.slick-prev {
+    left: 25px;
+    z-index: 1;
+}
+
+.slick-prev::before {
+    content: "";
+    display: block;
+    width: 18px;
+    height: 18px;
+    border-top: 3px solid #fff;
+    border-left: 3px solid #fff;
+    transform: rotate(-45deg);
+}
+
+.slick-next::before {
+    content: "";
+    display: block;
+    width: 18px;
+    height: 18px;
+    border-top: 3px solid #fff;
+    border-right: 3px solid #fff;
+    transform: rotate(45deg);
+}
+
+.lb-details {
+    display: none !important;
+}
 
 /* SP版 */
 @media screen and (max-width: 767px) {
