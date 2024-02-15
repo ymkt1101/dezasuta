@@ -1,0 +1,85 @@
+@charset "utf-8";
+
+/* cssリセット */
+html,
+body,
+h1,
+h2,
+h3,
+p,
+dl,
+dt,
+dd,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    /*デフォルトの文字色、font-familyを予め当てておく*/
+    color: #594c45;
+    font-family: "dnp-shuei-mgothic-std", sans-serif;
+    font-feature-settings: "palt";
+}
+
+a {
+    /*下線を消す*/
+    text-decoration: none;
+    /*色を消す*/
+    color: inherit;
+    transition: 0.3s;
+}
+
+a:hover {
+    opacity: 0.5;
+}
+
+ul {
+    /*左の「・」を消す*/
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+    border: none;
+}
+/* リセットCSSここまで */
+
+#about_me,
+#contact {
+    background-color: #ffbe98;
+    opacity: 0.32;
+}
+
+#work {
+    width: 100%;
+}
+
+.border {
+    background-image: url(../images/block.svg);
+    background-repeat: repeat-x;
+    background-position: top;
+    overflow: hidden;
+    color: transparent;
+}
+
+.sec_ttl {
+    margin: 100px 0 50px 0;
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* width 1200px以下の時は、サイドナビを非表示にする */
+@media screen and (max-width: 1200px) {
+    .nv {
+        display: none;
+    }
+
+    #work {
+        width: 767px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+}

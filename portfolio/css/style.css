@@ -1,0 +1,406 @@
+@charset "utf-8";
+
+body {
+    background-color: #fffaf2;
+}
+
+.wrapper {
+    width: 767px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    width: 100%;
+    height: 700px;
+    background-image: url(../images/mv.png);
+    background-size: 767px 550px;
+    background-repeat: no-repeat;
+}
+
+h1 img {
+    width: 212px;
+    text-align: center;
+    padding: 50px 0 50px 0;
+}
+
+h3 {
+    text-align: center;
+    padding-bottom: 50px;
+    font-size: 21px;
+    font-weight: 600;
+    letter-spacing: palt;
+}
+
+.txt_area {
+    width: fit-content;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.mv_bg {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.75em;
+    display: inline-block;
+    /* padding: 1%; */
+    margin-bottom: 10px;
+    background: linear-gradient(transparent 0%, #fffaf2 0%);
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+}
+
+.container {
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+.left_side {
+    text-align: center;
+}
+.left_side p {
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 2em;
+    white-space: nowrap;
+}
+.left_side img {
+    width: 100px;
+}
+
+.right_side {
+    margin: 8% 0 0 5%;
+}
+
+.right_side p {
+    font-size: 16px;
+    line-height: 1.75em;
+    letter-spacing: 0.2em;
+}
+
+.ld {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.ld img {
+    width: 700px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+}
+
+.nv {
+    position: fixed;
+    top: 170px;
+    left: calc(50% - 600px);
+    z-index: 99;
+}
+
+.nv img {
+    width: 130px;
+    padding-bottom: 40px;
+}
+
+.nv a {
+    font-size: 20px;
+}
+
+.my_self {
+    display: flex;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.skill {
+    width: fit-content;
+    margin: 0 auto;
+    font-size: 20px;
+    font-weight: 600;
+}
+/* .skill ul {
+    display: flex;
+    justify-content: left;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: palt;
+}
+
+.skill li {
+    width: 150px;
+    margin: 10px;
+    background-color: #ffe2d1;
+    text-align: center;
+    line-height: 50px;
+    border: 2px solid #594c45;
+    border-radius: 5px;
+} */
+
+.group_1 p {
+    display: inline-block;
+    width: 150px;
+    margin-bottom: 18px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 5px;
+    letter-spacing: palt;
+
+    color: #594c45;
+    background-color: #ffe2d1;
+    border: 2px solid #594c45;
+}
+.group_2 p {
+    display: inline-block;
+    width: 150px;
+    margin-bottom: 18px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 5px;
+    letter-spacing: palt;
+
+    color: #fffaf2;
+    background-color: #594c45;
+    border: 2px solid #bdb9b3;
+}
+.group_3 p {
+    display: inline-block;
+    width: 150px;
+    margin-bottom: 18px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 5px;
+    letter-spacing: palt;
+
+    color: #fffaf2;
+    background-color: #bdb9b3;
+    border: 2px solid #594c45;
+}
+
+/* カルーセル */
+.slider {
+    /*横幅94%で左右に余白を持たせて中央寄せ*/
+    width: 100%;
+    margin: 0 auto;
+}
+
+.slider img {
+    width: 50vw;
+}
+
+.slider p {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.27;
+    text-align: center;
+    padding-top: 10%;
+}
+
+.slider .slick-slide {
+    transform: scale(0.5); /*左右の画像のサイズを80%に*/
+    transition: all 0.5s; /*拡大や透過のアニメーションを0.5秒で行う*/
+    opacity: 0.5; /*透過50%*/
+}
+.slider .slick-slide.slick-center {
+    transform: scale(1); /*中央の画像のサイズだけ等倍に*/
+    opacity: 1; /*透過なし*/
+}
+
+/*矢印の設定*/
+
+/*戻る、次へ矢印の位置*/
+.slick-prev,
+.slick-next {
+    position: absolute; /*絶対配置にする*/
+    top: 42%;
+    cursor: pointer; /*マウスカーソルを指マークに*/
+    outline: none; /*クリックをしたら出てくる枠線を消す*/
+    border-top: 2px solid #666; /*矢印の色*/
+    border-right: 2px solid #666; /*矢印の色*/
+    height: 15px;
+    width: 15px;
+}
+
+.slick-prev {
+    /*戻る矢印の位置と形状*/
+    left: 25%;
+    transform: rotate(-135deg);
+}
+
+.slick-next {
+    /*次へ矢印の位置と形状*/
+    right: 25%;
+    transform: rotate(45deg);
+}
+
+footer {
+    text-align: center;
+    padding-bottom: 34px;
+}
+footer p {
+    text-align: center;
+    color: #3d3028;
+    font-weight: 600;
+}
+
+.ft_menu {
+    display: flex;
+    justify-content: center;
+}
+
+.ft_logo {
+    width: 324px;
+    padding-bottom: 20px;
+}
+
+/* アニメーション */
+/* ハンバーガーここから */
+.ham_btn {
+    position: absolute;
+    cursor: pointer;
+    width: 55px;
+    height: 55px;
+}
+
+/*ボタン内側*/
+.ham_btn span {
+    display: inline-block;
+    transition: all 0.4s; /*アニメーションの設定*/
+    position: absolute;
+    left: 14px;
+    height: 5px;
+    border-radius: 10px;
+    background: #fff;
+    width: 100%;
+    color: #594c45;
+}
+
+.ham_btn span:nth-of-type(1) {
+    top: 20px;
+}
+
+.ham_btn span:nth-of-type(2) {
+    top: 0px;
+}
+
+.ham_btn span:nth-of-type(3) {
+    top: 0px;
+}
+
+.ham_btn span:nth-of-type(3)::after {
+    content: "menu"; /*3つ目の要素のafterにMenu表示を指定*/
+    position: absolute;
+    top: 5px;
+    right: -2px;
+    font-size: 16px;
+}
+
+.ham_btn.active span:nth-of-type(1) {
+    top: 14px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+}
+
+.ham_btn.active span:nth-of-type(2) {
+    opacity: 0;
+}
+
+.ham_btn.active span:nth-of-type(3) {
+    top: 26px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+}
+
+.ham_btn.active span:nth-of-type(3)::after {
+    content: "close"; /*3つ目の要素のafterにClose表示を指定*/
+    transform: translateY(0) rotate(-45deg);
+    top: 5px;
+    left: 4px;
+}
+/*========= レイアウトのためのCSS ===============*/
+
+/* body {
+    background: #f3f3f3;
+    padding: 20px;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+.lead {
+    margin: 20px 0 0 0;
+}
+
+.btn-block {
+    width: 200px;
+    padding: 30px;
+} */
+/* ハンバーガーここまで */
+
+.scroll {
+    position: relative;
+    bottom: 50px;
+    text-align: center;
+}
+.scroll span {
+    /* テキストの設定 */
+    position: absolute;
+    left: 10px;
+    top: -80px;
+    color: #3d3028;
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+}
+
+.scroll::before {
+    /* 四角の設定 */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+    background: #3d3028;
+}
+.scroll::after {
+    /* 線の設定 */
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    height: 60px;
+    background: #3d3028;
+}
+
+/* レスポンシブ */
+@media screen and (max-width: 767px) {
+    .txt_area {
+        text-align: left;
+    }
+    .mv_bg {
+        font-size: 40px;
+    }
+
+    .container {
+        width: 85%;
+    }
+
+    .right_side p {
+        font-size: 21px;
+        font-weight: 600;
+        letter-spacing: 0em;
+    }
+    .right_side {
+        margin: 3% 0 0 5%;
+    }
+}
