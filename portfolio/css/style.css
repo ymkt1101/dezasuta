@@ -4,58 +4,69 @@ body {
     background-color: #fffaf2;
 }
 
-.wrapper {
+.container {
     width: 767px;
     margin: 0 auto;
 }
 
 header {
-    text-align: center;
-    width: 100%;
-    height: 700px;
+    /* width: 100%; */
+    height: 750px;
+    margin: 0 auto;
     background-image: url(../images/mv.png);
     background-size: 767px 550px;
     background-repeat: no-repeat;
 }
 
-h1 img {
+.main {
     width: 212px;
-    text-align: center;
-    padding: 50px 0 50px 0;
-}
-
-h3 {
-    text-align: center;
-    padding-bottom: 50px;
-    font-size: 21px;
-    font-weight: 600;
-    letter-spacing: palt;
+    margin: -1% auto 0;
 }
 
 .txt_area {
     width: fit-content;
-    margin: 0 auto;
+    margin: 16% auto 12%;
     text-align: left;
 }
 
 .mv_bg {
     font-size: 32px;
     font-weight: 600;
-    line-height: 1.75em;
+    line-height: 1.7em;
     display: inline-block;
-    /* padding: 1%; */
     margin-bottom: 10px;
+    padding: 0 10px;
     background: linear-gradient(transparent 0%, #fffaf2 0%);
     -webkit-box-decoration-break: clone;
-    box-decoration-break: clone;
 }
 
-.container {
+.sec_bg {
+    background-color: #ffefe6;
+}
+
+hr {
+    background-image: url(../images/block.svg);
+    background-repeat: repeat;
+    width: 767px;
+    height: 50px;
+    margin: 0 auto;
+    background-size: 50px auto;
+    border: none;
+}
+
+.inner {
     width: 85%;
     display: flex;
     justify-content: center;
     margin: 0 auto;
     padding-bottom: 50px;
+}
+
+.pf_subttl {
+    text-align: center;
+    padding-bottom: 30px;
+    font-size: 21px;
+    font-weight: 600;
 }
 
 .left_side {
@@ -78,7 +89,6 @@ h3 {
 .right_side p {
     font-size: 16px;
     line-height: 1.75em;
-    letter-spacing: 0.2em;
 }
 
 .ld {
@@ -95,22 +105,6 @@ h3 {
     opacity: 1;
 }
 
-.nv {
-    position: fixed;
-    top: 170px;
-    left: calc(50% - 600px);
-    z-index: 99;
-}
-
-.nv img {
-    width: 130px;
-    padding-bottom: 40px;
-}
-
-.nv a {
-    font-size: 20px;
-}
-
 .my_self {
     display: flex;
     font-size: 16px;
@@ -119,27 +113,10 @@ h3 {
 
 .skill {
     width: fit-content;
-    margin: 0 auto;
+    margin: 0 auto 10%;
     font-size: 20px;
     font-weight: 600;
 }
-/* .skill ul {
-    display: flex;
-    justify-content: left;
-    font-size: 20px;
-    font-weight: 600;
-    letter-spacing: palt;
-}
-
-.skill li {
-    width: 150px;
-    margin: 10px;
-    background-color: #ffe2d1;
-    text-align: center;
-    line-height: 50px;
-    border: 2px solid #594c45;
-    border-radius: 5px;
-} */
 
 .group_1 p {
     display: inline-block;
@@ -148,7 +125,6 @@ h3 {
     line-height: 50px;
     text-align: center;
     border-radius: 5px;
-    letter-spacing: palt;
 
     color: #594c45;
     background-color: #ffe2d1;
@@ -161,7 +137,6 @@ h3 {
     line-height: 50px;
     text-align: center;
     border-radius: 5px;
-    letter-spacing: palt;
 
     color: #fffaf2;
     background-color: #594c45;
@@ -174,7 +149,6 @@ h3 {
     line-height: 50px;
     text-align: center;
     border-radius: 5px;
-    letter-spacing: palt;
 
     color: #fffaf2;
     background-color: #bdb9b3;
@@ -183,26 +157,34 @@ h3 {
 
 /* カルーセル */
 .slider {
-    /*横幅94%で左右に余白を持たせて中央寄せ*/
-    width: 100%;
-    margin: 0 auto;
+    margin: 0 calc(50% - 50vw);
 }
 
 .slider img {
-    width: 50vw;
+    width: 700px;
 }
 
-.slider p {
+.work_area {
+    padding-bottom: 20%;
+}
+
+.work_ttl {
+    margin-top: 25%;
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.work_txt {
     font-size: 22px;
     font-weight: 600;
     line-height: 1.27;
     text-align: center;
-    padding-top: 10%;
 }
 
 .slider .slick-slide {
-    transform: scale(0.5); /*左右の画像のサイズを80%に*/
-    transition: all 0.5s; /*拡大や透過のアニメーションを0.5秒で行う*/
+    transform: scale(0.6); /*左右の画像のサイズ*/
+    transition: all 0.5s; /*アニメーションを0.5秒で行う*/
     opacity: 0.5; /*透過50%*/
 }
 .slider .slick-slide.slick-center {
@@ -219,167 +201,268 @@ h3 {
     top: 42%;
     cursor: pointer; /*マウスカーソルを指マークに*/
     outline: none; /*クリックをしたら出てくる枠線を消す*/
-    border-top: 2px solid #666; /*矢印の色*/
-    border-right: 2px solid #666; /*矢印の色*/
-    height: 15px;
-    width: 15px;
+    border-top: 7px solid #fffaf2; /*矢印の色*/
+    border-right: 7px solid #fffaf2; /*矢印の色*/
+    height: 48px;
+    width: 26px;
 }
 
-.slick-prev {
+.slick-prev::before {
     /*戻る矢印の位置と形状*/
+    content: "";
     left: 25%;
     transform: rotate(-135deg);
 }
 
-.slick-next {
+.slick-next::before {
     /*次へ矢印の位置と形状*/
+    content: "";
     right: 25%;
     transform: rotate(45deg);
 }
 
+/* コンタクト */
+label {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 20px 0;
+    display: block;
+}
+
+input[type="text"] {
+    width: 380px;
+    height: 30px;
+    padding: 10px;
+    color: #333;
+    border: 1px solid #594c45;
+    border-radius: 3%;
+}
+
+textarea {
+    width: 500px;
+    height: 300px;
+    color: #f2f2f2;
+    font-size: 16px;
+    border: 1px solid #594c45;
+    border-radius: 1%;
+}
+
+button {
+    font-size: 25px;
+    font-weight: 600;
+    width: 400px;
+    height: 60px;
+    color: #fffaf2;
+    background-color: #b39484;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 2px 3px 0 0 rgba(33, 19, 15, 0.5);
+    margin-top: 10%;
+}
+
+.cont_frm {
+    display: block;
+    width: fit-content;
+    height: 770px;
+    margin: 0 auto;
+}
+
+.cont_txt {
+    font-size: 21px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.btn {
+    text-align: center;
+}
+
+button:hover {
+    color: #594c45;
+    background-color: #ffbe98;
+    box-shadow: 2px 3px 0 0 rgba(145, 87, 64, 0.5);
+}
+
+/* フッター */
 footer {
     text-align: center;
     padding-bottom: 34px;
 }
-footer p {
-    text-align: center;
+.copywrt {
     color: #3d3028;
+    font-size: 18px;
     font-weight: 600;
 }
 
 .ft_menu {
     display: flex;
     justify-content: center;
+    color: #3d3028;
+    font-size: 18px;
+    font-weight: 600;
+}
+.ft_menu li {
+    width: 170px;
+    padding: 100px 10px;
 }
 
 .ft_logo {
     width: 324px;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
 }
 
-/* アニメーション */
 /* ハンバーガーここから */
-.ham_btn {
-    position: absolute;
+.nv {
+    position: fixed;
+    top: 170px;
+    left: calc(50% - 600px);
+    z-index: 90;
+    backdrop-filter: blur(5px);
+}
+
+.nv img {
+    width: 130px;
+    padding-bottom: 40px;
+}
+
+.nv a {
+    font-size: 20px;
+}
+
+.nv_btn {
+    position: relative; /*ボタン内側の基点となるためrelativeを指定*/
     cursor: pointer;
     width: 55px;
     height: 55px;
+    top: 30px;
+    left: calc(50% + 280px);
+    text-align: center;
 }
 
 /*ボタン内側*/
-.ham_btn span {
-    display: inline-block;
+.nv_btn span {
+    width: 55px;
     transition: all 0.4s; /*アニメーションの設定*/
     position: absolute;
-    left: 14px;
     height: 5px;
-    border-radius: 10px;
-    background: #fff;
-    width: 100%;
-    color: #594c45;
+    border-radius: 5px;
+    background: #594c45;
 }
 
-.ham_btn span:nth-of-type(1) {
-    top: 20px;
+.nv_btn span:nth-of-type(1) {
+    top: 13px;
 }
 
-.ham_btn span:nth-of-type(2) {
-    top: 0px;
+.nv_btn span:nth-of-type(2) {
+    top: 27px;
 }
 
-.ham_btn span:nth-of-type(3) {
-    top: 0px;
+.nv_btn span:nth-of-type(3) {
+    top: 40px;
 }
 
-.ham_btn span:nth-of-type(3)::after {
+.nv_btn span:nth-of-type(3)::after {
     content: "menu"; /*3つ目の要素のafterにMenu表示を指定*/
     position: absolute;
-    top: 5px;
-    right: -2px;
+    top: 9px;
+    left: 8px;
+    color: #594c45;
     font-size: 16px;
 }
 
-.ham_btn.active span:nth-of-type(1) {
-    top: 14px;
+/*activeクラスが付与されると線が回転して×になり、Menu⇒Closeに変更*/
+
+.nv_btn.active span:nth-of-type(1) {
+    top: 13px;
     left: 18px;
-    transform: translateY(6px) rotate(-45deg);
-    width: 30%;
+    transform: translateY(13px) rotate(-45deg);
+    width: 55px;
 }
 
-.ham_btn.active span:nth-of-type(2) {
+.nv_btn.active span:nth-of-type(2) {
     opacity: 0;
 }
 
-.ham_btn.active span:nth-of-type(3) {
-    top: 26px;
+.nv_btn.active span:nth-of-type(3) {
+    top: 27px;
     left: 18px;
-    transform: translateY(-6px) rotate(45deg);
-    width: 30%;
+    transform: rotate(45deg);
+    width: 55px;
 }
 
-.ham_btn.active span:nth-of-type(3)::after {
+.nv_btn.active span:nth-of-type(3)::after {
     content: "close"; /*3つ目の要素のafterにClose表示を指定*/
-    transform: translateY(0) rotate(-45deg);
-    top: 5px;
-    left: 4px;
+    transform: rotate(-45deg);
+    top: 18px;
+    left: 33px;
 }
-/*========= レイアウトのためのCSS ===============*/
-
-/* body {
-    background: #f3f3f3;
-    padding: 20px;
-}
-
-a {
-    color: #333;
-    text-decoration: none;
-}
-
-.lead {
-    margin: 20px 0 0 0;
-}
-
-.btn-block {
-    width: 200px;
-    padding: 30px;
-} */
 /* ハンバーガーここまで */
 
 .scroll {
     position: relative;
-    bottom: 50px;
-    text-align: center;
+    width: fit-content;
+    margin: 0 auto;
 }
-.scroll span {
-    /* テキストの設定 */
+.scroll p {
     position: absolute;
-    left: 10px;
-    top: -80px;
+    top: -5px;
+    left: -16px;
+    font-size: 12px;
+    font-weight: 600;
     color: #3d3028;
-    font-size: 0.7rem;
-    letter-spacing: 0.05em;
 }
 
 .scroll::before {
     /* 四角の設定 */
     content: "";
     position: absolute;
-    top: 0;
-    left: 50%;
+    left: -5px;
     width: 12px;
     height: 12px;
     border-radius: 2px;
     background: #3d3028;
+
+    /*指定秒数透過して、永遠にループ*/
+    animation: circlemove 1.6s ease-in-out infinite,
+        cirlemovehide 1.6s ease-out infinite;
 }
+
 .scroll::after {
     /* 線の設定 */
     content: "";
     position: absolute;
-    bottom: 0;
-    left: 50%;
     width: 2px;
-    height: 60px;
+    height: 62px;
     background: #3d3028;
+    border-radius: 1px; /* 角丸は線幅の半分 */
+    top: 12px;
+}
+
+/*下からの距離が変化して上から下に動く*/
+@keyframes circlemove {
+    0% {
+        top: 5px;
+    }
+    100% {
+        top: 72px;
+    }
+}
+
+/*上から下にかけて透過→不透明→透過する*/
+@keyframes cirlemovehide {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0.9;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 /* レスポンシブ */
@@ -391,16 +474,28 @@ a {
         font-size: 40px;
     }
 
-    .container {
+    .inner {
         width: 85%;
     }
 
     .right_side p {
         font-size: 21px;
         font-weight: 600;
-        letter-spacing: 0em;
     }
     .right_side {
         margin: 3% 0 0 5%;
+    }
+}
+/* width 1200px以下の時は、サイドナビを非表示にする */
+@media screen and (max-width: 1200px) {
+    .nv {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .slider {
+        overflow: hidden;
+        margin: 0 auto;
     }
 }

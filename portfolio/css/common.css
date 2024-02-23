@@ -45,14 +45,40 @@ img {
 }
 /* リセットCSSここまで */
 
-#about_me,
-#contact {
+.loading {
+    width: 100vw;
+    height: 100vh;
+    transition: all 1s;
     background-color: #ffbe98;
-    opacity: 0.32;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    opacity: 1;
+    visibility: visible;
 }
 
-#work {
-    width: 100%;
+.loading.is-active {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loading-animation {
+    width: 100vw;
+    height: 100vh;
+    transition: all 1s;
+    background-color: #ffbe98;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loading-animation.is-active {
+    opacity: 1;
+    visibility: visible;
 }
 
 .border {
@@ -64,22 +90,8 @@ img {
 }
 
 .sec_ttl {
-    margin: 100px 0 50px 0;
+    margin: 100px 0 45px 0;
     font-size: 36px;
     font-weight: 600;
     text-align: center;
-}
-
-/* width 1200px以下の時は、サイドナビを非表示にする */
-@media screen and (max-width: 1200px) {
-    .nv {
-        display: none;
-    }
-
-    #work {
-        width: 767px;
-    }
-}
-
-@media screen and (max-width: 767px) {
 }
