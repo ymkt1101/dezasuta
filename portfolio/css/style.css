@@ -1,31 +1,37 @@
 @charset "utf-8";
-
 body {
     background-color: #fffaf2;
+    overflow-x: hidden;
+}
+
+/* モーダルオープン時の画面固定 */
+body.scrolllock {
+    overflow-y: hidden;
 }
 
 .container {
-    width: 767px;
+    max-width: 767px;
     margin: 0 auto;
 }
 
-header {
-    /* width: 100%; */
-    height: 750px;
+.header {
+    position: relative;
     margin: 0 auto;
+    padding: 9% 0;
     background-image: url(../images/mv.png);
-    background-size: 767px 550px;
+    background-size: 100% auto;
     background-repeat: no-repeat;
 }
 
 .main {
     width: 212px;
-    margin: -1% auto 0;
+    margin: 0 auto;
+    padding: 10px 0 8%;
 }
 
 .txt_area {
     width: fit-content;
-    margin: 16% auto 12%;
+    margin: 8% auto;
     text-align: left;
 }
 
@@ -33,8 +39,6 @@ header {
     font-size: 32px;
     font-weight: 600;
     line-height: 1.7em;
-    display: inline-block;
-    margin-bottom: 10px;
     padding: 0 10px;
     background: linear-gradient(transparent 0%, #fffaf2 0%);
     -webkit-box-decoration-break: clone;
@@ -47,10 +51,9 @@ header {
 hr {
     background-image: url(../images/block.svg);
     background-repeat: repeat;
-    width: 767px;
-    height: 50px;
+    height: 7vw;
+    max-height: 50px;
     margin: 0 auto;
-    background-size: 50px auto;
     border: none;
 }
 
@@ -91,20 +94,6 @@ hr {
     line-height: 1.75em;
 }
 
-.ld {
-    width: 100%;
-    height: 100vh;
-    position: relative;
-}
-
-.ld img {
-    width: 700px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    opacity: 1;
-}
-
 .my_self {
     display: flex;
     font-size: 16px;
@@ -113,43 +102,38 @@ hr {
 
 .skill {
     width: fit-content;
-    margin: 0 auto 10%;
+    margin: 0 auto;
+    padding-bottom: 10%;
     font-size: 20px;
     font-weight: 600;
 }
 
-.group_1 p {
-    display: inline-block;
-    width: 150px;
-    margin-bottom: 18px;
-    line-height: 50px;
+.group {
+    display: flex;
+    flex-wrap: wrap;
     text-align: center;
-    border-radius: 5px;
+}
 
+.group li {
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 5px;
+    margin: 0 3px 15px;
+    flex-shrink: 0;
+}
+
+.group_web li {
     color: #594c45;
     background-color: #ffe2d1;
     border: 2px solid #594c45;
 }
-.group_2 p {
-    display: inline-block;
-    width: 150px;
-    margin-bottom: 18px;
-    line-height: 50px;
-    text-align: center;
-    border-radius: 5px;
-
+.group_app li {
     color: #fffaf2;
     background-color: #594c45;
     border: 2px solid #bdb9b3;
 }
-.group_3 p {
-    display: inline-block;
-    width: 150px;
-    margin-bottom: 18px;
-    line-height: 50px;
-    text-align: center;
-    border-radius: 5px;
-
+.group_ms li {
     color: #fffaf2;
     background-color: #bdb9b3;
     border: 2px solid #594c45;
@@ -162,14 +146,16 @@ hr {
 
 .slider img {
     width: 700px;
+    margin: 0 auto;
 }
 
 .work_area {
-    padding-bottom: 20%;
+    margin-top: 80px;
+    padding-top: 80px;
+    padding-bottom: 25%;
 }
 
 .work_ttl {
-    margin-top: 25%;
     font-size: 36px;
     font-weight: 600;
     text-align: center;
@@ -192,79 +178,91 @@ hr {
     opacity: 1; /*透過なし*/
 }
 
-/*矢印の設定*/
-
-/*戻る、次へ矢印の位置*/
+/*slick arrow*/
 .slick-prev,
 .slick-next {
-    position: absolute; /*絶対配置にする*/
-    top: 42%;
-    cursor: pointer; /*マウスカーソルを指マークに*/
-    outline: none; /*クリックをしたら出てくる枠線を消す*/
-    border-top: 7px solid #fffaf2; /*矢印の色*/
-    border-right: 7px solid #fffaf2; /*矢印の色*/
-    height: 48px;
-    width: 26px;
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    background-color: #594c45;
+    border-radius: 50%;
 }
 
-.slick-prev::before {
-    /*戻る矢印の位置と形状*/
+.slick-next {
+    right: calc(50% - 350px);
+    z-index: 99;
+}
+.slick-prev {
+    left: calc(50% - 350px);
+    z-index: 99;
+}
+.slick-prev:focus,
+.slick-prev:hover,
+.slick-next:focus,
+.slick-next:hover {
+    background-color: #594c45;
+}
+
+.slick-prev::before,
+.slick-next::before {
+    position: relative;
+    text-align: center;
+    display: inline-block;
     content: "";
-    left: 25%;
-    transform: rotate(-135deg);
+    width: 25px;
+    height: 25px;
+    border-top: 8px solid #fffaf2;
+    border-left: 8px solid #fffaf2;
+    border-radius: 4px;
+    opacity: 1;
+}
+.slick-prev::before {
+    left: 5px;
+    transform: rotate(-45deg);
 }
 
 .slick-next::before {
-    /*次へ矢印の位置と形状*/
-    content: "";
-    right: 25%;
-    transform: rotate(45deg);
+    right: 5px;
+    transform: rotate(135deg);
 }
 
-/* コンタクト */
 label {
+    display: block;
     font-size: 16px;
     font-weight: 600;
-    margin: 20px 0;
-    display: block;
+    margin: 5% 0 3%;
 }
 
-input[type="text"] {
-    width: 380px;
+input[type="text"],
+input[type="email"] {
+    width: 80%;
     height: 30px;
     padding: 10px;
     color: #333;
     border: 1px solid #594c45;
-    border-radius: 3%;
+    border-radius: 5px;
 }
 
 textarea {
-    width: 500px;
+    width: 100%;
     height: 300px;
-    color: #f2f2f2;
+    padding-top: 10px;
+    color: #333;
     font-size: 16px;
     border: 1px solid #594c45;
-    border-radius: 1%;
+    border-radius: 5px;
 }
 
-button {
-    font-size: 25px;
-    font-weight: 600;
-    width: 400px;
-    height: 60px;
-    color: #fffaf2;
-    background-color: #b39484;
-    border: none;
-    border-radius: 30px;
-    box-shadow: 2px 3px 0 0 rgba(33, 19, 15, 0.5);
-    margin-top: 10%;
+.contact {
+    display: block;
+    margin: 0 auto;
 }
 
 .cont_frm {
     display: block;
-    width: fit-content;
-    height: 770px;
+    width: 90%;
     margin: 0 auto;
+    padding-bottom: 10%;
 }
 
 .cont_txt {
@@ -274,13 +272,25 @@ button {
     margin-bottom: 5%;
 }
 
-.btn {
-    text-align: center;
+.cont_btn {
+    display: block;
+    font-size: 25px;
+    font-weight: 600;
+    /* width: 400px; */
+    width: 80%;
+    height: 60px;
+    margin: 10% auto 0;
+    color: #fffaf2;
+    background-color: #b39484;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 2px 3px 0 0 rgba(33, 19, 15, 0.5);
 }
 
-button:hover {
+.cont_btn:hover {
     color: #594c45;
     background-color: #ffbe98;
+    cursor: pointer;
     box-shadow: 2px 3px 0 0 rgba(145, 87, 64, 0.5);
 }
 
@@ -312,57 +322,89 @@ footer {
     padding-bottom: 40px;
 }
 
-/* ハンバーガーここから */
+/* サイドメニュ */
 .nv {
     position: fixed;
-    top: 170px;
-    left: calc(50% - 600px);
+    display: block;
+    top: 165px;
+    left: calc((50% - 383px) - 190px);
     z-index: 90;
     backdrop-filter: blur(5px);
 }
 
 .nv img {
-    width: 130px;
-    padding-bottom: 40px;
+    display: block;
+    margin: 0 auto;
+    max-width: 130px;
+    padding-bottom: 20px;
 }
 
 .nv a {
+    display: inline-block;
+    color: #594c45;
     font-size: 20px;
+    font-weight: 400;
 }
 
-.nv_btn {
-    position: relative; /*ボタン内側の基点となるためrelativeを指定*/
+.nv_menu li {
+    font-size: 20px;
+    height: 40px;
+    line-height: 40px;
+    color: #ffbe98;
+}
+
+.nv_menu a::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    display: inline-block;
+    background-color: #ffbe98;
+}
+.nv_menu a:hover::before {
+    transform: rotate(90deg);
+    transition: 0.5s;
+}
+
+/* ハンバーガメニュ */
+.ham_btn {
+    position: absolute;
     cursor: pointer;
-    width: 55px;
-    height: 55px;
+    width: 60px;
+    height: 60px;
     top: 30px;
-    left: calc(50% + 280px);
-    text-align: center;
+    right: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 8888;
 }
 
 /*ボタン内側*/
-.nv_btn span {
-    width: 55px;
-    transition: all 0.4s; /*アニメーションの設定*/
+.ham_btn span {
+    content: "";
+    display: block;
     position: absolute;
+    width: 55px;
     height: 5px;
     border-radius: 5px;
     background: #594c45;
+    transition: 0.3s;
 }
 
-.nv_btn span:nth-of-type(1) {
+.ham_btn span:nth-of-type(1) {
     top: 13px;
 }
 
-.nv_btn span:nth-of-type(2) {
+.ham_btn span:nth-of-type(2) {
     top: 27px;
 }
 
-.nv_btn span:nth-of-type(3) {
+.ham_btn span:nth-of-type(3) {
     top: 40px;
 }
 
-.nv_btn span:nth-of-type(3)::after {
+.ham_btn span:nth-of-type(3)::after {
     content: "menu"; /*3つ目の要素のafterにMenu表示を指定*/
     position: absolute;
     top: 9px;
@@ -372,37 +414,82 @@ footer {
 }
 
 /*activeクラスが付与されると線が回転して×になり、Menu⇒Closeに変更*/
-
-.nv_btn.active span:nth-of-type(1) {
+.ham_btn.active span:nth-of-type(1) {
     top: 13px;
-    left: 18px;
     transform: translateY(13px) rotate(-45deg);
     width: 55px;
+    transition: 0.3s;
 }
 
-.nv_btn.active span:nth-of-type(2) {
+.ham_btn.active span:nth-of-type(2) {
     opacity: 0;
 }
 
-.nv_btn.active span:nth-of-type(3) {
+.ham_btn.active span:nth-of-type(3) {
     top: 27px;
-    left: 18px;
     transform: rotate(45deg);
     width: 55px;
+    transition: 0.3s;
 }
 
-.nv_btn.active span:nth-of-type(3)::after {
+.ham_btn.active span:nth-of-type(3)::after {
     content: "close"; /*3つ目の要素のafterにClose表示を指定*/
     transform: rotate(-45deg);
     top: 18px;
     left: 33px;
 }
-/* ハンバーガーここまで */
+/* ハンバーガここまで */
+
+.nv_mdl {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 190, 152, 0.9);
+    z-index: 7777;
+}
+
+.nv_mdl img {
+    width: 200px;
+    padding: 50px;
+}
+
+.nv_mdl ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.nv_mdl li {
+    padding: 20px;
+    color: #594c45;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+/* ハンバーガーモーダル */
+.nv_mdl {
+    pointer-events: none;
+    opacity: 0;
+    transform-origin: center;
+    transform: scale(0.5);
+    transition: all 0.3s ease;
+}
+
+.nv_mdl.open {
+    pointer-events: auto;
+    opacity: 1;
+    transform: scale(1);
+}
 
 .scroll {
     position: relative;
     width: fit-content;
     margin: 0 auto;
+    padding-bottom: 14%;
+    top: -40px;
 }
 .scroll p {
     position: absolute;
@@ -465,27 +552,11 @@ footer {
     }
 }
 
-/* レスポンシブ */
-@media screen and (max-width: 767px) {
-    .txt_area {
-        text-align: left;
-    }
-    .mv_bg {
-        font-size: 40px;
-    }
-
-    .inner {
-        width: 85%;
-    }
-
-    .right_side p {
-        font-size: 21px;
-        font-weight: 600;
-    }
-    .right_side {
-        margin: 3% 0 0 5%;
-    }
+.sp_brk {
+    display: none;
 }
+
+/* レスポンシブ */
 /* width 1200px以下の時は、サイドナビを非表示にする */
 @media screen and (max-width: 1200px) {
     .nv {
@@ -494,8 +565,128 @@ footer {
 }
 
 @media screen and (max-width: 767px) {
+    .header {
+        background-size: cover;
+    }
+
+    .scroll {
+        padding: 15% 0;
+        top: -25px;
+    }
+
+    .txt_area {
+        text-align: left;
+    }
+
+    .inner {
+        width: 85%;
+    }
+
+    .right_side {
+        margin: 3% 0 0 5%;
+    }
+
     .slider {
         overflow: hidden;
         margin: 0 auto;
+    }
+    .slider img {
+        max-width: 100vw;
+    }
+
+    .slick-prev,
+    .slick-next {
+        width: 60px;
+        height: 60px;
+    }
+    .slick-next {
+        right: 5%;
+    }
+    .slick-prev {
+        left: 5%;
+    }
+    .slick-prev::before,
+    .slick-next::before {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .pc_brk {
+        display: none;
+    }
+
+    .cont_txt {
+        line-height: 1.75;
+    }
+
+    .sp_brk {
+        display: inline;
+    }
+
+    .ham_btn {
+        top: 15px;
+        right: 2%;
+    }
+
+    .inner {
+        width: 90%;
+        display: block;
+        margin: 0 auto;
+    }
+    .right_side {
+        margin: 0 auto;
+        padding-top: 5%;
+        font-weight: 600;
+    }
+
+    .group {
+        justify-content: center;
+    }
+
+    .cont_btn {
+        width: 90%;
+    }
+
+    .ft_menu {
+        width: fit-content;
+        padding: 0;
+        display: block;
+        margin: 0 auto;
+    }
+    .ft_menu li {
+        padding: 25px;
+    }
+    .ft_logo {
+        width: 50%;
+    }
+    .copywrt {
+        font-size: 70%;
+    }
+
+    .slick-prev,
+    .slick-next {
+        top: 45%;
+        width: 45px;
+        height: 45px;
+    }
+    .slick-prev::before,
+    .slick-next::before {
+        width: 15px;
+        height: 15px;
+    }
+    .slick-prev::before {
+        left: 3px;
+    }
+    .slick-next::before {
+        right: 3px;
+    }
+
+    .slick-next {
+        right: 3%;
+    }
+    .slick-prev {
+        left: 3%;
     }
 }

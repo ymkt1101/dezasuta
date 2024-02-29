@@ -35,40 +35,48 @@
     <div class="loading">
         <div class="loading-animation"> <img src="images/loading.gif" alt="LOADING"> </div>
     </div>
-    <!-- サイト画面 -->
-    <ul class="nv">
-        <li><img src="images/logo_menu.png" alt=""></li>
-        <li>
-            <div class="box_1">
-            </div>
-            <a href="#about_me">私について</a>
-        </li>
-        <li><a href="#work">私がつくったもの</a></li>
-        <li><a href="#contact">私にれんらく</a></li>
-    </ul>
 
+    <!-- サイドナビ -->
+    <div class="nv">
+        <img src="images/logo_menu.png" alt="">
+        <ul class="nv_menu">
+            <li><a href="#about_me">私について</a></li>
+            <li><a href="#work">私がつくったもの</a></li>
+            <li><a href="#contact">私にれんらく</a></li>
+        </ul>
+    </div>
+    <!-- ナビモーダル-->
+    <nav class="nv_mdl">
+        <ul>
+            <li><img src="images/logo_menu.png" alt="menu_logo"></li>
+            <li><a href="#about_me">私について</a></li>
+            <li><a href="#work">私のつくったもの</a></li>
+            <li><a href="#contact">私にれんらく</a></li>
+        </ul>
+    </nav>
     <div class="container">
-        <header>
+        <header class="header">
             <!-- ハンバーガーメニュ -->
-            <div class="nv_btn">
+            <div class="ham_btn">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
-            <h1 class="main"><img src="images/logo_main.png" alt="DESIGN BLOCK"></h1>
-            <div class="txt_area">
-                <p><span class="mv_bg">あなたの「こうしたい！」を</span></p>
-                <p><span class="mv_bg">1つ1つ積み上げて</span></p>
-                <p><span class="mv_bg">想いが詰まったサイトに。</span></p>
-            </div>
-            <div class="scroll">
-                <p>Scroll</p>
-            </div>
-        </header>
 
+            <h1 class="main">
+                <img src="images/logo_main.png" alt="DESIGN BLOCK">
+            </h1>
+            <p class="txt_area">
+                <span class="mv_bg">あなたの「こうしたい！」を</span>
+                <br><span class="mv_bg">1つ1つ積み上げて</span>
+                <br><span class="mv_bg">想いが詰まったサイトに。</span>
+            </p>
+        </header>
+        <div class="scroll">
+            <p>Scroll</p>
+        </div>
         <section id="about_me" class="sec_bg">
             <hr>
-            <!-- <div class="sec_bd"></div> -->
             <h2 class="sec_ttl">私について</h2>
             <div class="inner">
                 <div class="left_side">
@@ -77,34 +85,33 @@
                 </div>
                 <div class="right_side">
                     <p>ポートフォリオをご覧いただき、ありがとうございます。<br>
-                        これまで小売業のECサイト運営・管理担当として、<br>
+                        これまで小売業のECサイト運営・管理担当として、<br class="pc_brk">
                         責任感とやりがいを持って従事してきました。<br>
-                        クライアントとして1からサイト構築に携わった経験から、<br>
+                        クライアントとして1からサイト構築に携わった経験から、<br class="pc_brk">
                         現状の問題点を洗い出し、解決をゴールとするデザインをご提供します。</p>
                 </div>
             </div>
             <h3 class="pf_subttl">できること</h3>
             <div class="skill">
-                <div class="group_1">
-                    <p>HTML</p>
-                    <p>CSS</p>
-                    <p>JavaScript</p>
-                    <p>jQuery</p>
-                </div>
-                <div class="group_2">
-                    <p>Photoshop</p>
-                    <p>illustrator</p>
-                </div>
-                <div class="group_3">
-                    <p>Word</p>
-                    <p>Excel(VBA)</p>
-                    <p>Powerpoint</p>
-                    <p>Access</p>
-                </div>
+                <ul class="group group_web">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>jQuery</li>
+                </ul>
+                <ul class="group group_app">
+                    <li>Photoshop</li>
+                    <li>illustrator</li>
+                </ul>
+                <ul class="group group_ms">
+                    <li>Word</li>
+                    <li>Excel(VBA)</li>
+                    <li>Powerpoint</li>
+                    <li>Access</li>
+                </ul>
             </div>
-            <hr>
-            <!-- <div class="sec_bd"></div> -->
         </section>
+        <hr>
 
         <section id="work" class="work_area">
             <h2 class="work_ttl">私がつくったもの</h2>
@@ -147,33 +154,34 @@
         </section>
         <section id="contact" class="sec_bg">
             <hr>
-            <!-- <div class="sec_bd"></div> -->
             <h2 class="sec_ttl">私にれんらく</h2>
             <!-- コンタクトフォーム -->
-            <p class="cont_txt">ご連絡をいただく場合は、下記のフォームをご利用ください。</p>
+            <p class="cont_txt">ご連絡をいただく場合は、<br class="sp_brk">下記のフォームをご利用ください。</p>
             <div class="cont_frm">
                 <form
                     action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfjiVO5EKg8mVj-gmTk6oifkY6utXf8JFc28oDOhpaW5Om9gQ/formResponse">
                     <div class="cont_ml_addr">
                         <label for="email">返信先メールアドレス</label>
-                        <input id="email" type="text" name="entry.913021399" placeholder="example@mail.co.jp">
+                        <input id="email" type="email" name="entry.913021399" placeholder="example@mail.co.jp" required>
                     </div>
                     <div class="cont_ttl">
                         <label for="title">件名</label>
-                        <input id="title" type="text" name="entry.446251065" placeholder="ご用件を入力してください">
+                        <input id="title" type="text" name="entry.446251065" placeholder="ご用件を入力してください" required>
                     </div>
                     <div class="cont_msg">
                         <label for="msg">お問合せ内容</label>
-                        <textarea id="msg" name="entry.1055123631" placeholder="お問合せ内容を入力してください。"></textarea>
+                        <textarea id="msg" name="entry.1055123631" placeholder="お問合せ内容を入力してください。" required></textarea>
                     </div>
-                    <div class="btn">
-                        <button type="submit" name="button" value="">送信</button>
-                    </div>
+                    <button type="submit" name="button" class="cont_btn" value="">送信</button>
                 </form>
+                <!-- サンクスページを表示する -->
+                <!-- <script type="text/javascript">var submitted = false;</script>
+                <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
+                    onload="if(submitted){window.location='thanks.html';}"></iframe> -->
             </div>
-            <hr>
-            <!-- <div class="sec_bd"></div> -->
+
         </section>
+        <hr>
 
         <footer>
             <ul class="ft_menu">

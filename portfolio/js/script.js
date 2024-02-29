@@ -33,8 +33,21 @@ jQuery(function () {
 });
 
 // ハンバーガーメニュ
-$(".nv_btn").click(function () {
-  $(this).toggleClass('active');
+$(function(){
+  var flg = false;
+  
+  $('.ham_btn,.nv_mdl').on('click', function () {
+    $('.ham_btn').toggleClass('active');
+    $('.nv_mdl').toggleClass('open');
+    
+    if (flg == false) {
+      $('body').addClass('scrolllock');
+      flg = true;
+    } else {
+      $('body').removeClass('scrolllock');
+      flg = false;
+    }
+  });
 });
 
 // カルーセルとリサイズ時
@@ -47,8 +60,10 @@ function initializeSlick() {
     autoplay: true,
     autoplaySpeed: 5000,
     slidesToShow: slidesToShow,
+    // slidesToShow: 1,
     slidesToScroll: 1,
     centerMode: true,
+    centerPadding: '25vw',
     variableWidth: true,
     dots: false,
   });
