@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>私のポートフォリオ</title>
-    <!-- <meta name="description" content="DESIGN BLOCK 個人のポートフォリオサイトです"> -->
-    <meta name="robots" content="noindex">
+    <meta name="description" content="DESIGN BLOCK 個人のポートフォリオサイトです">
+    <!-- <meta name="robots" content="noindex"> -->
     <link rel="shortcut icon" href="images/icon/favicon.ico">
     <link rel="apple-touch-icon" href="images/icon/apple-touch-icon.png">
     <link rel="icon" type="image/png" href="images/icon/android-chrome-192x192.png">
@@ -27,6 +27,7 @@
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <!-- lightbox js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
     <script src="js/script.js" async></script>
 </head>
 
@@ -114,10 +115,18 @@
         <hr>
 
         <section id="work" class="work_area">
-            <h2 class="work_ttl">私がつくったもの</h2>
+            <h2 class="sec_ttl">私がつくったもの</h2>
             <ul class="slider">
                 <li>
-                    <picture><img src="images/dwork1.png" alt=""></picture>
+                    <img src="images/dwork1.png" class="slick-thumbnail" alt="学割プランバナー/スクール課題"
+                        data-large="images/work/challenge.jpg">
+                    <div class="wk_mdl_txt1" style="display: none;">2024.01</div>
+                    <div class="wk_mdl_txt2" style="display: none;">
+                        架空美容院サイト(デザインのみ)/スクール課題/製作期間 2週間
+                        ショップと店内の明るい雰囲気が伝わるサイトを目指して作成しました。
+                        新規訪問には、スタッフの顔が見え安心できる店舗の様子が伝わるように
+                        リピート訪問はすぐに予約に進めるよう予約ボタンを目立つ仕様にしました
+                    </div>
                     <p class="work_txt">2024.01<br>
                         学割プランバナー/スクール課題
                     </p>
@@ -152,6 +161,21 @@
                 </li>
             </ul>
         </section>
+        <!-- モーダル -->
+        <div id="wk_modal" class="wk_mdl">
+            <div class="wk_mdl_close">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="wk_mdl_inner">
+                <div id="modalDescription1" class="wk_mdl_txt1"></div>
+                <div id="modalDescription2" class="wk_mdl_txt2"></div>
+                <hr>
+                <img class="wk_mdl_cont" id="wk_modalImage">
+            </div>
+        </div>
+
         <section id="contact" class="sec_bg">
             <hr>
             <h2 class="sec_ttl">私にれんらく</h2>
@@ -159,15 +183,17 @@
             <p class="cont_txt">ご連絡をいただく場合は、<br class="sp_brk">下記のフォームをご利用ください。</p>
             <div class="cont_frm">
                 <form
-                    action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfjiVO5EKg8mVj-gmTk6oifkY6utXf8JFc28oDOhpaW5Om9gQ/formResponse">
-                    <div class="cont_ml_addr">
-                        <label for="email">返信先メールアドレス</label>
+                    action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfjiVO5EKg8mVj-gmTk6oifkY6utXf8JFc28oDOhpaW5Om9gQ/formResponse"
+                    method="post" target="hidden_iframe" onsubmit="submitted=true;">
+                    <div class="cont_ml_addr”>
+                        <label for=" email">返信先メールアドレス</label>
                         <input id="email" type="email" name="entry.913021399" placeholder="example@mail.co.jp" required>
                     </div>
                     <div class="cont_ttl">
                         <label for="title">件名</label>
                         <input id="title" type="text" name="entry.446251065" placeholder="ご用件を入力してください" required>
                     </div>
+
                     <div class="cont_msg">
                         <label for="msg">お問合せ内容</label>
                         <textarea id="msg" name="entry.1055123631" placeholder="お問合せ内容を入力してください。" required></textarea>
@@ -175,11 +201,11 @@
                     <button type="submit" name="button" class="cont_btn" value="">送信</button>
                 </form>
                 <!-- サンクスページを表示する -->
-                <!-- <script type="text/javascript">var submitted = false;</script>
+                <script type="text/javascript">var submitted = false;</script>
                 <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
-                    onload="if(submitted){window.location='thanks.html';}"></iframe> -->
+                    onload="if(submitted){window.location='thanks.html';}">
+                </iframe>
             </div>
-
         </section>
         <hr>
 
@@ -191,9 +217,8 @@
             </ul>
 
             <img class="ft_logo" src="images/logo_footer.png" alt="">
-            <p class="copywrt">&copy;DESIGN BLOCK. All Right Reserved.</p>
+            <p class="ft_copywrt">&copy;DESIGN BLOCK. All Right Reserved.</p>
         </footer>
-    </div>
 </body>
 
 </html>
