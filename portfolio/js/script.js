@@ -70,10 +70,12 @@ function initializeSlick() {
 initializeSlick();
 
 $(window).on('resize', function() {
-    var elements = document.getElementsByClassName("skill");
-    var windowWidth = window.innerWidth;
+  var elements = document.getElementsByClassName("skill");
+  var windowWidth = window.innerWidth;
+  // 画面幅/スキルの幅で商を計算 商が3より小さくなったらjustify-content:centerを設定する。
+  var quotient = Math.floor(windowWidth / 160); 
     
-    initializeSlick();
+  initializeSlick();
   
   if (windowWidth > 480 && windowWidth < 660) {
       for (var i = 0; i < elements.length; i++) {
@@ -84,7 +86,13 @@ $(window).on('resize', function() {
       for (var i = 0; i < elements.length; i++) {
         elements[i].style.width = "fit-content";
     }
-    }
+  }
+//  console.log(quotient)
+ if (quotient < 3) {
+  $('.group').css('justify-content', 'center');
+ } else {
+  $('.group').css('justify-content', 'inherit');
+ }
     // var resizeTimer;
     
     // clearTimeout(resizeTimer);
